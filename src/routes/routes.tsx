@@ -155,7 +155,7 @@ const routes = [
 
     /* 公共路由 */
     {
-        path: "/logreg",
+        path: "/login",
         element: <LoginRegister></LoginRegister>
     },
 

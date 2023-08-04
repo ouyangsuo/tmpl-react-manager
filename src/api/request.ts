@@ -1,4 +1,6 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
+
+import { useNavigate } from 'react-router-dom'
 
 const instance = axios.create({
   // baseURL: "https://lekuzhima.club",
@@ -27,10 +29,15 @@ instance.interceptors.response.use(
     return response.data;
   },
 
-  function (error) {
-    // 对响应错误做点什么
+  (error: AxiosError) => {
+    if (error.response?.status === 401 || error.response?.status === 403) {
+      // 跳转到登录页
+      window.location.href = "/login";
+    }
+
     return Promise.reject(error);
   }
+
 );
 
 /* 处理错误 */
