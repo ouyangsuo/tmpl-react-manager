@@ -1,0 +1,41 @@
+@import "../assets/theme.scss";
+
+.error-container {
+    max-width: 800px;
+    margin: 10rem auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .error-message {
+        font-size: 18px;
+        color: #777;
+    }
+
+    .error-image {
+        // max-width: 800px;
+        width: 50vw;
+        margin: -4rem 0 -4rem 0;
+        z-index: -100;
+    }
+
+    .error-button {
+        background-color: $main_bg_color;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        min-width: 15rem;
+        border-radius: .2rem;
+
+        &:hover {
+            background-color: $main_bg_color_light;
+        }
+    }
+
+}

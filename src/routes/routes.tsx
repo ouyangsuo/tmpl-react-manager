@@ -11,7 +11,7 @@ import Dashboard from "@/views/Dashboard/Dashboard"
 import Interview from "@/views/Interview"
 import Library from "@/views/Library"
 import Mine from "@/views/Mine"
-import NotFound from "@/views/Notfound/NotFound";
+import NotFound from "@/pages/NotFound";
 
 /* 题库二级页面 */
 import Module from "@/views/Library/Module";
