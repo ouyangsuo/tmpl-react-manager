@@ -37,7 +37,7 @@
     "dev": "cross-env REACT_APP_ENV=development craco start",
     "build": "rimraf dist && cross-env REACT_APP_ENV=production craco build &",
     "test": "cross-env REACT_APP_ENV=test craco build",
-    "gcommit":"git add . && git commit -m 漂亮的404",
+    "gcmt":"git add . && git commit -m 漂亮的路由守卫",
     "gpush": "git add . && git commit -m 漂亮的404 && git push -u origin master && git push -u github master"
   },
   "eslintConfig": {

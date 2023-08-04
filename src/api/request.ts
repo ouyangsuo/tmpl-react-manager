@@ -53,7 +53,7 @@ export async function doGet(url, conf) {
   }
 }
 
-export async function doPost(url, data, conf) {
+export async function doPost(url, data, conf?) {
   try {
     const ret = await instance.post(url, data, conf);
     return ret;

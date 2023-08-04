@@ -1,4 +1,5 @@
 // rootState.ts
+import { UserState } from "./features/userSlice"
 
 interface Counter {
     count: number
@@ -7,5 +8,6 @@ interface Counter {
 // 根据您的应用程序状态结构进行定义
 export interface RootState {
     // 状态属性和类型定义
-    counter: Counter
+    counter: Counter,
+    user: UserState
 }

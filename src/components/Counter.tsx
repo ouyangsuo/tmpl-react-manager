@@ -4,8 +4,9 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { decrement, increment, incrementByAmount } from '../store/features/counterSlice';
 import { RootState } from '@/store/rootState';
+import { RoleAuth, RoleInReduxAuth } from '@/routes/Auth';
 
-const Counter = () => {
+const Counter: React.FC<{}> = () => {
     const count = useSelector((state: RootState) => state.counter.count);
     const dispatch = useDispatch();
 
@@ -19,4 +20,4 @@ const Counter = () => {
     );
 };
 
-export default Counter;
+export default RoleInReduxAuth(Counter)();

@@ -44,9 +44,6 @@ import LoginRegister from '@/pages/LoginRegister';
 /* ==================== */
 
 
-
-
-
 const lazyLoad = src => <Suspense fallback={<>...</>}>{React.createElement(lazy(src))}</Suspense>;
 
 const routes = [
@@ -166,7 +163,7 @@ const routes = [
     /* 示例路由 */
     {
         path: "/counter",
-        element: <Counter></Counter>
+        element: <Counter roles={["pm", "admin", "tourist"]}></Counter>
     },
 
 
