@@ -6,7 +6,7 @@ import { ExclamationCircleFilled } from "@ant-design/icons";
 
 import { Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
-import { getAlbums } from "@/api/album";
+import { getAlbums } from "@/apis/album";
 
 
 const { confirm } = Modal;

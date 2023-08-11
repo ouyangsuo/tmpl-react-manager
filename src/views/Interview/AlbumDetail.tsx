@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 // import { getAlbumDetail } from '@/api/album';
-import { getAlbumDetail } from '../../api/album';
+import { getAlbumDetail } from '../../apis/album';
 
 
 import type { TableColumnsType } from 'antd';

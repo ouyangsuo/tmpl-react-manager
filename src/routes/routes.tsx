@@ -159,11 +159,10 @@ const routes = [
         element: <LoginRegister></LoginRegister>
     },
 
-
     /* 示例路由 */
     {
         path: "/counter",
-        element: <Counter roles={["pm", "admin", "tourist"]}></Counter>
+        element: <Counter roles={["pm", "admin","tourist"]}></Counter>
     },
 
 

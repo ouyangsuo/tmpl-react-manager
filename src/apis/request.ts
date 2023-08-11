@@ -18,7 +18,9 @@ instance.interceptors.request.use(
 
   function (error) {
     // 对请求错误做些什么
-    return Promise.reject(error);
+    return Promise.reject(error).catch(
+      err => handleErr("interceptors.request", err)
+    )
   }
 );
 
@@ -35,44 +37,36 @@ instance.interceptors.response.use(
       window.location.href = "/login";
     }
 
-    return Promise.reject(error);
+    return Promise.reject(error).catch(
+      err => handleErr("interceptors.response", err)
+    )
   }
 
 );
 
 /* 处理错误 */
 const handleErr = (when, err) => {
-  console.log();
   console.log("====================");
   console.log("err occured when", when);
   console.log(err);
   console.log("====================");
-  console.log();
 };
 
 /* 通用CRUD */
 export async function doGet(url, conf) {
-  try {
-    const ret = await instance.get(url, conf);
-    return ret;
-  } catch (error) {
-    handleErr(`doGet@${url}`, error);
-  }
+  const ret = await instance.get(url, conf);
+  return ret;
 }
 
 export async function doPost(url, data, conf?) {
-  try {
-    const ret = await instance.post(url, data, conf);
-    return ret;
-  } catch (error) {
-    handleErr(`doPost@${url}`, error);
-  }
+  const ret = await instance.post(url, data, conf);
+  return ret;
 }
 
-export function doDelete(url, conf) {
+export async function doDelete(url, conf) {
   return instance.delete(url, conf);
 }
 
-export function doPut(url, data, conf) {
+export async function doPut(url, data, conf) {
   return instance.put(url, data, conf);
 }

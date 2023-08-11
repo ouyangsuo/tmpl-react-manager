@@ -21,6 +21,12 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   devServer: {
     port: 4000, // 设置新的端口号
+    proxy: {
+      '/api': {
+        target: 'https://lekuzhima.club',
+        changeOrigin: true,
+      },
+    },
   },
 
   /* 覆盖WP配置 */
